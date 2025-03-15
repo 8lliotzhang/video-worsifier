@@ -15,9 +15,11 @@ def convertAllFrames():
         if os.path.exists(filename):
             print(filename + "exists yayayay")
             AsciiArray[i].append(AsciiArt.from_image(filename))
+            print(AsciiArray[i])
         else:
             print(filename + " does not exist :(")
-            
+    
+
 
 
 

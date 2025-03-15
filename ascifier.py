@@ -7,15 +7,24 @@ from ascii_magic import AsciiArt
 # output frame i of ascii
 
 def convertAllFrames():
-    totalFrames = 301
+    
+    item_count = 0
+    with os.scandir("extracted_frames") as entries:
+        for entry in entries:
+            item_count += 1
+    
+    totalFrames = item_count
+    print("FINAL COUNT IS " + str(item_count))
     AsciiArray = []
 
     for i in range(totalFrames):     
-        filename = f'frame{i}.jpg'
+        filename = f'extracted_frames/frame{i}.jpg'
         if os.path.exists(filename):
-            print(filename + "exists yayayay")
-            AsciiArray[i].append(AsciiArt.from_image(filename))
-            print(AsciiArray[i])
+            print(filename + " exists yayayay")
+            AsciiVersion = AsciiArt.from_image(filename)
+            AsciiVersion.to_terminal()
+            AsciiArray.append(AsciiArt.from_image(filename))
+            
         else:
             print(filename + " does not exist :(")
     
@@ -23,18 +32,6 @@ def convertAllFrames():
 
 
 
-
-
-
-
-my_art = AsciiArt.from_image('erm.png')
-#replace with CURRENT FRAME
-
-output = my_art.to_ascii()
-#convert to the ascii
-
-
-print(output) 
 #temp output - plan to STORE each frame, then display it frame by frame
 
 convertAllFrames()

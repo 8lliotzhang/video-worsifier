@@ -1,32 +1,42 @@
 import cv2
+import os
 
-def FrameCapture(path): 
+def FrameCapture(path, output_folder): 
 
-	# Path to video file 
-	vidObj = cv2.VideoCapture(path) 
+    # Create the output folder if it doesn't exist
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
 
-	# Used as counter variable 
-	count = 0
+    # Path to video file 
+    vidObj = cv2.VideoCapture(path) 
 
-	# checks whether frames were extracted 
-	success = 1
+    # Used as counter variable 
+    count = 0
 
-	while success: 
+    # checks whether frames were extracted 
+    success = 1
 
-		# vidObj object calls read 
-		# function extract frames 
-		success, image = vidObj.read() 
+    while success: 
 
-		# Saves the frames with frame-count 
-		cv2.imwrite("frame%d.jpg" % count, image) 
+        # vidObj object calls read 
+        # function extract frames 
+        success, image = vidObj.read() 
 
-		count += 1
-		print(count)
-        
+        if not success:
+            break
+
+        # Save the frames in the specified folder
+        frame_path = os.path.join(output_folder, "frame%d.jpg" % count)
+        cv2.imwrite(frame_path, image) 
+
+        count += 1
+        print(f"Frame {count} saved at {frame_path}")
 
 # Driver Code 
 if __name__ == '__main__': 
 
-	# Calling the function 
-	FrameCapture("videoplayback.mp4") 
+    # Specify the output folder
+    output_folder = "extracted_frames"
 
+    # Calling the function 
+    FrameCapture("videoplayback.mp4", output_folder)

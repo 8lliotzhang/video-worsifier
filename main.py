@@ -1,9 +1,42 @@
-import pywhatkit as pwk
-if __name__ == "__main__":
-    input_image = "bwtest-sm.jpg"
-    output_image = "ascii_out"
+# Importing all necessary libraries 
+import cv2 
+import os 
 
-    pwk.image_to_ascii_art(input_image,output_image)
+# Read the video from specified path 
+cam = cv2.VideoCapture("C:\\Users\\Admin\\PycharmProjects\\project_1\\openCV.mp4") 
 
-    with open(output_image+".txt","r") as f:
-        print(f.read())
+try: 
+	
+	# creating a folder named data 
+	if not os.path.exists('data'): 
+		os.makedirs('data') 
+
+# if not created then raise error 
+except OSError: 
+	print ('Error: Creating directory of data') 
+
+# frame 
+currentframe = 0
+
+while(True): 
+	
+	# reading from frame 
+	ret,frame = cam.read() 
+
+	if ret: 
+		# if video is still left continue creating images 
+		name = './data/frame' + str(currentframe) + '.jpg'
+		print ('Creating...' + name) 
+
+		# writing the extracted images 
+		cv2.imwrite(name, frame) 
+
+		# increasing counter so that it will 
+		# show how many frames are created 
+		currentframe += 1
+	else: 
+		break
+
+# Release all space and windows once done 
+cam.release() 
+cv2.destroyAllWindows() 

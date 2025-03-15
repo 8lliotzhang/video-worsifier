@@ -1,9 +1,17 @@
-import pywhatkit as pwk
-if __name__ == "__main__":
-    input_image = "bwtest-sm.jpg"
-    output_image = "ascii_out"
+from ascii_magic import AsciiArt
+#HATE. LET ME TELL YOU HOW
 
-    pwk.image_to_ascii_art(input_image,output_image)
 
-    with open(output_image+".txt","r") as f:
-        print(f.read())
+# take frame i of input
+# output frame i of ascii
+
+my_art = AsciiArt.from_image('erm.png')
+#replace with CURRENT FRAME
+
+output = my_art.to_ascii()
+#convert to the ascii
+
+
+print(output) 
+#temp output - plan to STORE each frame, then display it frame by frame
+

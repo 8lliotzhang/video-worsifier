@@ -1,9 +1,37 @@
-import pywhatkit as pwk
-if __name__ == "__main__":
-    input_image = "bwtest-sm.jpg"
-    output_image = "ascii_out"
+import os
+from ascii_magic import AsciiArt
+#HATE. LET ME TELL YOU HOW
 
-    pwk.image_to_ascii_art(input_image,output_image)
 
-    with open(output_image+".txt","r") as f:
-        print(f.read())
+# take frame i of input
+# output frame i of ascii
+
+def convertAllFrames():
+    
+    item_count = 0
+    with os.scandir("extracted_frames") as entries:
+        for entry in entries:
+            item_count += 1
+    
+    totalFrames = item_count
+    print("FINAL COUNT IS " + str(item_count))
+    AsciiArray = []
+
+    for i in range(totalFrames):     
+        filename = f'extracted_frames/frame{i}.jpg'
+        if os.path.exists(filename):
+            print(filename + " exists yayayay")
+            AsciiVersion = AsciiArt.from_image(filename)
+            AsciiVersion.to_terminal()
+            AsciiArray.append(AsciiArt.from_image(filename))
+            
+        else:
+            print(filename + " does not exist :(")
+    
+
+
+
+
+#temp output - plan to STORE each frame, then display it frame by frame
+
+convertAllFrames()

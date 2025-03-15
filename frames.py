@@ -1,9 +1,6 @@
 import cv2
 import os
 
-global count 
-count = 0
-
 def FrameCapture(path, output_folder): 
 
     # Create the output folder if it doesn't exist
@@ -12,6 +9,9 @@ def FrameCapture(path, output_folder):
 
     # Path to video file 
     vidObj = cv2.VideoCapture(path) 
+
+    # Used as counter variable 
+    count = 0
 
     # checks whether frames were extracted 
     success = 1

@@ -1,5 +1,9 @@
 import os
 from ascii_magic import AsciiArt
+import tkinter as tk
+from tkinter import ttk
+
+
 #HATE. LET ME TELL YOU HOW
 
 
@@ -20,10 +24,11 @@ def convertAllFrames():
     for i in range(totalFrames):     
         filename = f'extracted_frames/frame{i}.jpg'
         if os.path.exists(filename):
-            print(filename + " exists yayayay")
-            AsciiVersion = AsciiArt.from_image(filename)
-            AsciiVersion.to_terminal()
-            AsciiArray.append(AsciiArt.from_image(filename))
+            #print(filename + " exists yayayay")
+            AsciiVersion = AsciiArt.from_image(filename).to_ascii()
+            print(AsciiVersion)
+            #print(AsciiArray)
+            AsciiArray.append(AsciiArt.from_image(filename).to_ascii())
             
         else:
             print(filename + " does not exist :(")
@@ -35,3 +40,9 @@ def convertAllFrames():
 #temp output - plan to STORE each frame, then display it frame by frame
 
 convertAllFrames()
+
+root = tk.Tk()
+root.geometry("800x600")
+root.title("Video Worsifier 0.1")
+
+

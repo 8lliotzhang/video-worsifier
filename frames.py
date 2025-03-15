@@ -32,11 +32,9 @@ def FrameCapture(path, output_folder):
         count += 1
         print(f"Frame {count} saved at {frame_path}")
 
-# Driver Code 
-if __name__ == '__main__': 
 
-    # Specify the output folder
-    output_folder = "extracted_frames"
 
-    # Calling the function 
-    FrameCapture("videoplayback.mp4", output_folder)
+# Specify the output folder
+output_folder = "extracted_frames"
+# Calling the function 
+FrameCapture("videoplayback.mp4", output_folder)

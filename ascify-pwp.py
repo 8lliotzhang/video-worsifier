@@ -3,7 +3,6 @@ import os
 from ascii_magic import AsciiArt
 import cv2
 import shutil
-from yt_dlp import YoutubeDL
 
 
 video = "videos/Rick Roll (Different link + no ads).mp4"

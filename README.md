@@ -19,6 +19,7 @@ This system <b>P</b>rints images <b>W</b>hile <b>P</b>rocessing hence its name. 
 <h4>Ascifier2</h4>
 This system uses state-of-the-art Techni-Audio systems (Harry spent hours syncing up the audio). Uses an library of pre-rendered ASCII for real fast (and throttlable) animations! Supports variable FPS, audio (requires much fine-tuning).
 <br>
+<br>
 
 
 THIS SOFTWARE IS PROVIDED AS IS, AND ALL THAT MIT JAZZ, BLAH BLAH BLAH.

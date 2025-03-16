@@ -4,7 +4,7 @@ It's not copyright infringment cuz we're not making money or anything.
 
 <h3>Using The Worsifier</h3>
 If for whatever reason you want to use this, make sure you follow some steps:
-<br>
+<br><br>
 <ul>
 <li>Ensure ALL required packages and dependencies are installed correctly.</li>
 <li>Really, really make sure you got all of them.</li>

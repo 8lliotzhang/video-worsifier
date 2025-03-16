@@ -12,4 +12,9 @@ If for whatever reason you want to use this, make sure you follow some steps:
 <li>For best results perform incantations during the loading sequence.</li>
 </ul>
 
+<h3>The Systems</h3>
+<h4>Ascify-PWP</h4>
+This system <b>P</b>rints images <b>W</b>hile <b>P</b>rocessing hence its name.
+
+
 THIS SOFTWARE IS PROVIDED AS IS, AND ALL THAT MIT JAZZ, BLAH BLAH BLAH.

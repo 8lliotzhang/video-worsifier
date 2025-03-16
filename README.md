@@ -14,7 +14,11 @@ If for whatever reason you want to use this, make sure you follow some steps:
 
 <h3>The Systems</h3>
 <h4>Ascify-PWP</h4>
-This system <b>P</b>rints images <b>W</b>hile <b>P</b>rocessing hence its name.
+This system <b>P</b>rints images <b>W</b>hile <b>P</b>rocessing hence its name. It works pretty quickly and pretty well on most videos. Does not support audio at all sadly.
+
+<h4>Ascifier2</h4>
+This system uses state-of-the-art Techni-Audio systems (Harry spent hours syncing up the audio). Uses an library of pre-rendered ASCII for real fast (and throttlable) animations! Supports variable FPS, audio (requires much fine-tuning).
+<br>
 
 
 THIS SOFTWARE IS PROVIDED AS IS, AND ALL THAT MIT JAZZ, BLAH BLAH BLAH.

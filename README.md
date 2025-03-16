@@ -5,12 +5,18 @@ It's not copyright infringment cuz we're not making money or anything.
 <h3>Using The Worsifier</h3>
 If for whatever reason you want to use this, make sure you follow some steps:
 <br><br>
-<ul>
+<ol>
+<li>Open the file ascify-pwp.py.</li>
+<li>Install ascii_magic: Go to terminal, run 'pip install ascii_magic'.</li>
+<li>Install cv: run 'pip install opencv-python'.</li>
 <li>Ensure ALL required packages and dependencies are installed correctly.</li>
 <li>Really, really make sure you got all of them.</li>
-<li>Reference the correct mp4 file in the videos subfolder (or wherever u put it)</li>
+<li>Have an mp4 file that you plan to convert into an ASCII movie.</li>
+<li>On line 16, reference the correct mp4 file in the videos subfolder (or wherever u put it).</li>
+<li>You should now be able to run the python file - adjust the terminal size for the optimal screen size.</li>
 <li>For best results perform incantations during the loading sequence.</li>
-</ul>
+
+</ol>
 
 <h3>The Systems</h3>
 <h4>Ascify-PWP</h4>
